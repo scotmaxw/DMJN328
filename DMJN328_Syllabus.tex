@@ -1,16 +1,20 @@
 \documentclass{article}
 \usepackage{csquotes}
 % !BIB TS-program = biber
+% !BIB program = biber
 \usepackage[backend=biber, citestyle=authoryear]{biblatex}
-\addbibresource{//Users/Simon/OneDrive - Wilfrid Laurier University/Courses/DMJN328/DMJN328.bib}
+\addbibresource{/Users/skiss/OneDrive - Wilfrid Laurier University/Courses/DMJN328/DMJN328.bib}
 \usepackage{url}
-\title{DMJN328}
-\author{Simon J. Kiss\\\\Term\\
+\usepackage{enumitem}
+\usepackage{hyperref}
+\setlist[enumerate]{nosep}
+\title{DMJN328: Quantitative Research Methods for Journalists}
+\author{Simon J. Kiss\\\\Winter 2020\\
 Wilfrid Laurier University - Brantford\\
-Day and Time\\Office: RCW 312 \\
+MW 10-11:30 OD211\\Office: RCW 312 \\
 Phone: 519-756-8228\\
 E-mail: please contact me via mylearningspace\\
-Office Hours: Day and Time}
+Office Hours: Mondays 11:30 a.m. - 12:30 p.m.}
 \date{}
 \begin{document}
 \maketitle
@@ -18,65 +22,296 @@ Office Hours: Day and Time}
 
 \end{center}
 \section*{Course Description}
+This course builds on material in DMJN208, developing students’ facility with quantitative research methods used in journalism and media research. Students learn to work with and critically assess quantitative information, with a particular emphasis on polls and scientific studies. The course covers basic and intermediate statistical concepts and calculations. Potential topics include survey research design and interpretation, causation, the central limit theorem, standard error, statistical significance and confidence intervals.
 
 \subsection*{Pep Talk}
 Learning R can be tough; Lord knows I struggled to learn it. But learning anything is always hard. But when you have really learned it. Wow, there is no better feeling in the world.  And once you have learned even just a few basic things in R you - and others - will be absolutely amazed at what you can accomplish.
 
-One of the leaders in developing R packages including almost all of the packages you will be using in this course, Hadley Wickham had this to say about frustration and learning to code and R. 
+One of the leaders in developing R, Hadley Wickham, had this to say about frustration and learning to code and R: 
+
 \begin{quote}
- 
-It's easy when you start out programming to get really frustrated and think, ''Oh it?s me, I?m really stupid,'' or, ''I?m not made out to program.'' But, that is absolutely not the case. Everyone gets frustrated. I still get frustrated occasionally when writing R code. It?s just a natural part of programming. So, it happens to everyone and gets less and less over time. Don?t blame yourself. Just take a break, do something fun, and then come back and try again later.
+ It's easy when you start out programming to get really frustrated and think, ''Oh it's me, I'm really stupid,'' or, ''I'm not made out to program.'' But, that is absolutely not the case. Everyone gets frustrated. I still get frustrated occasionally when writing R code. It's just a natural part of programming. So, it happens to everyone and gets less and less over time. Don't blame yourself. Just take a break, do something fun, and then come back and try again later.
 \end{quote}
 
-There will be moments where you want to bash your head against the desk.  Don\\'t. Ask me for help any way (e.g. personally, e-mail, via Twitter, Slack, mylearningspace). Take a break. Walk around. Go get a drink. Watch cat videos on YouTube for a few minutes then just come back and take a break.
+There will be moments where you want to bash your head against the desk.  Don't. Ask me for help any way (e.g. personally, e-mail, mylearningspace). Take a break. Walk around. Go get a drink. Watch cat videos on YouTube for a few minutes then just come back and take a break.
 
 You. can. do. this...
 
 And when you're done, you will be blown away....
 
 \subsection*{Learning Outcomes}
+At the end of this course will be able to:
 \begin{enumerate}
-\item \end{enumerate}
- 
+\item understand basic principles of data visualization
+\item import successfully a variety of datasets into R
+\item to manipulate different types of variables found in modern datasets in R
+\item to produce and modify basic charts and graphs in R
+\item understand basic statistical concepts such as measures of central tendency, variation and inference. 
+\end{enumerate}
+
 \section*{Course Calendar And Readings}
-Monday, January 6, 2020\\
-Introduction, Introuction to R, RStudio and Github\\
-Discussion of \emph{The Joy of Stats}\\
-Wednesday, January 8, 2020\\
-Read Chapter 1 and 2 of \cite{healy_data_2018}\\
-Class Complete `Week 1: Dataviz`
-Monday, January 13, 2020\\
+\textbf{Monday, January 6, 2020}\\
+\emph{Introduction}
+\begin{enumerate}
+\item Discussion of \emph{The Joy of Stats}
+\item Introduction to R and RStudio
+\item Introductdion to GitHub
+\end{enumerate}
+\bigskip
+\textbf{Wednesday, January 8, 2020\\}
+\emph{Introduction}\\
+\emph{Before} class read Ch. 2 of \textcite{healy_data_2018}\\
+\emph{In Class} work through code in Ch. 2 of \textcite{healy_data_2018}\\\\
+\textbf{Monday, January 13,2020\\}
+\emph{Introduction to Data Visualization in R\\}
+\emph{Before class} read Chapter 3 of \textcite{healy_data_2018}\\
+\emph{In class} work through code in Ch. 3 of \textcite{healy_data_2018}\\\\
+\textbf{Wednesday, January 15, 2020\\}
+\emph{Introduction to R For Journalists}\\
+\emph{Before class} watch and work through code in: 
+\begin{enumerate}
+\item \href{http://learn.r-journalism.com/en/how_to_use_r/}{How to Use R}
+\begin{enumerate}
+\item \href{http://learn.r-journalism.com/en/how_to_use_r/tour_rstudio/rstudio-tour/}{Rstudio Guide}Module 1, Part 1(7:36)
+\item \href{http://learn.r-journalism.com/en/how_to_use_r/intro_to_r/intro-to-r/}{Introduction to R} Module 1, Part 2 (15:05) and Part 3 (18:51)
+\item \href{http://learn.r-journalism.com/en/how_to_use_r/initial_exploration/data-structures/}{Data structures in R} Module 1, Part 4 (19:11)
+\item Setting Up For This Class (5:13)
+\item R Basics
+\end{enumerate}
 
-Wednesday, January 15, 2020
-Monday, January 20, 2020
-Wednesday, January 22, 2020
-Monday, January 27, 2020
-Wednesday, January 29, 2020
-Monday, February 3, 2020
-Wednesday, February 5, 2020
-Monday, February 10, 2020
-Wednesday, February 12, 2020
-Monday, February 17, 2020
-Wednesday, February 19, 2020
-Monday, February 24, 2020
-Wednesday, February 26, 2020
-Monday, March 2, 2020
-Wednesday, March 4, 2020
-Monday, March 9, 2020
-Wednesday, March 11, 2020
-Monday, March 16, 2020
-Wednesday, March 18, 2020
-Monday, March 23, 2020
-Wednesday, March 25, 2020
-Monday, March 30, 2020
-Wednesday, April 1, 2020
+\end{enumerate}
+\bigskip
+\emph{In class} conduct exercises at the end of: 
+    
+\begin{enumerate}
+\item How to use R
+\begin{enumerate}
 
+\item \href{http://code.r-journalism.com/chapter-1/#section-intro-to-r}{Introduction to R}
+\item \href{http://code.r-journalism.com/chapter-1/#section-data-structures-in-r}{Data Structures}
+\end{enumerate}
+\end{enumerate}
+\bigskip
+\textbf{Monday, January 20, 2020\\}
+\emph{Introduction to R For Journalists}\\
+Before class watch and work through code in:
+\begin{enumerate}
+\item \href{https://youtu.be/IrCpddfUVsY}{Importing/Exporting Data} Module 1 Video 6 (12:55) \underline{(Optional) }
+\begin{enumerate}
+\item CSV Files 
+\item \href{https://youtu.be/B5iKikPvdBk}{Excel Files} Module 1 Video 8 (11:57)
+\item \href{https://youtu.be/q3p6_v_6g9c}{SPSS Files} Module 1 Video 12 (13:55)
+\end{enumerate}
+\end{enumerate}
+\bigskip
+\emph{In class} work through exercises at the end of:
+\begin{enumerate}
+\item Importing/Exporting Data
+\begin{enumerate}
+\item \href{http://code.r-journalism.com/chapter-2/#section-csvs}{CSV Files}
+\item \href{http://code.r-journalism.com/chapter-2/#section-excel}{Excel Files}
+\end{enumerate}	
+\end{enumerate}
+\bigskip
+\textbf{Wednesday, January 22, 2020\\}
+Where to search for data?\\
+\begin{enumerate}
+\item Statistics Canada data
+\item Public Opinion Data
+\item Municipal data 
+\item Open government sites 
+\end{enumerate}
+\bigskip
+\textbf{Monday, January 27, 2020\\}
+\emph{R for Journalists}\\
+Before class watch and work through code in: 
+\begin{enumerate}
+\item \href{http://learn.r-journalism.com/en/wrangling/}{Wrangling data}Module 2, Part 1 (2:42)
+\begin{enumerate}
+\item \href{http://learn.r-journalism.com/en/wrangling/dplyr/dplyr/}{Transforming and analyzing data} Module 2, Part 2 (21:27), 
+\item \href{http://learn.r-journalism.com/en/wrangling/dplyr/dplyr/}{Transforming and analyzing data} Module 2, Part 3 (14:56)
+\item \href{http://learn.r-journalism.com/en/wrangling/dplyr/dplyr/}{Transforming and analyzing data} Module 2, Part 4 (20:21)
+\end{enumerate}
+\end{enumerate}
+\bigskip
+In class conduct exercises for
+\begin{enumerate}
+\item Wrangling data
+\begin{enumerate}
+\item \href{http://code.r-journalism.com/chapter-3/#section-transforming-and-analyzing-data}{Transforming and analyzing data}
+
+\end{enumerate}
+
+\end{enumerate}
+\bigskip
+\textbf{Monday, February 3, 2020\\}
+\emph{R for Journalists}\\
+
+\begin{enumerate}
+\item Wrangling Data
+\begin{enumerate}
+\item \href{http://learn.r-journalism.com/en/wrangling/tidyr_joins/tidyr-joins/}{Tidying and joining data} Module 2, Part 5 (22:03)
+\item \href{http://learn.r-journalism.com/en/wrangling/tidyr_joins/tidyr-joins/}{Tidying and joining data} Module 2, Part 6 (13:46)
+\end{enumerate}
+
+\end{enumerate}
+
+
+\bigskip
+In class work through:
+\begin{enumerate}
+\item Wrangling Data 
+\begin{enumerate}
+\item \href{http://code.r-journalism.com/chapter-3/#section-tidying-and-joining-data}{Tidying and joining data}
+\end{enumerate}
+\end{enumerate}
+\bigskip
+\textbf{Wednesday, February 5, 2020\\}
+\emph{R For Journalists}\\
+Before class watch and work through code in:
+\begin{enumerate}
+\item Wrangling Data
+\begin{enumerate}
+\item \href{http://learn.r-journalism.com/en/wrangling/strings/strings/} Module 2, part 8
+\item \href{http://learn.r-journalism.com/en/wrangling/dates/dates/}{Dealing with Dates} Module 2, part 9
+\end{enumerate}
+\end{enumerate}
+\bigskip
+In class work through exercises for:
+\begin{enumerate}
+\item Wrangling data
+\begin{enumerate}
+\item \href{http://code.r-journalism.com/chapter-3/#section-handling-strings}{Handling Strings}
+\item \href{http://code.r-journalism.com/chapter-3/#section-dealing-with-dates}{Dealing with dates}
+\end{enumerate}
+\end{enumerate}
+\bigskip
+\textbf{Monday, February 10, 2020\\}
+\emph{R For Journalists}\\
+Before class watch and work through code in:
+\begin{enumerate}
+\item Wrangling Data
+\begin{enumerate}
+\item \href{https://youtu.be/yt9x6PNYvlw}{Dealing with Dates}
+\end{enumerate}
+
+\end{enumerate}
+\bigskip
+In class work through exercises in:
+\begin{enumerate}
+\item Wrangling Data
+\begin{enumerate}
+\item \href{http://code.r-journalism.com/chapter-3/#section-dealing-with-dates}(Dealing with Dates)
+\end{enumerate}
+\end{enumerate}
+\bigskip
+\textbf{Wednesday, February 12, 2020\\
+}
+In class work and support on Assignment 2 \\
+\textbf{Monday, February 17-19, 2020\\}
+Reading Week - No classes\\\\
+\textbf{Monday, February 24, 2020}\\
+\emph{R For Journalists}\\
+Before class watch
+\begin{enumerate}
+\item Visualizing data \href{https://youtu.be/8VW-APX_5a0}{Module 3, Video, Part 1}(5:00)
+\begin{enumerate}
+\item Charts with ggplot2 \href{https://youtu.be/ZBewoHKyMcc}{Module 3, Video, Part 2}(18:50)
+\item Charts with ggplot2 \href{https://youtu.be/x4OMSY2kz8M}{Module 3, Video, Part 3}(20:01)
+\item Charts with ggplot2 \href{https://youtu.be/xjnj-rJwd6A}{Module 3, Video, Part 4}(12:31)
+\end{enumerate}
+\end{enumerate}
+\bigskip
+In class, work through exercises 
+\begin{enumerate}
+\item Visualizing Data
+\begin{enumerate}
+\item \href{http://code.r-journalism.com/chapter-4/#section-ggplot2}{Charts with ggplot2}
+\item \href{http://code.r-journalism.com/chapter-4/#section-customizing-charts}{Customizing charts}
+\end{enumerate}
+\end{enumerate}
+\bigskip
+\textbf{Wednesday, February 26, 2020}\\
+\emph{R For Journalists}\\
+Review, Project Work\\\\
+\textbf{Monday, March 2, 2020\\}
+\emph{R For Journalists}\\
+Before class watch:
+
+\begin{enumerate}
+\item Spatial analysis \href{https://youtu.be/iF050DaUxC4}{Module 4, Part1}
+\begin{enumerate}
+\item Static Maps \href{https://youtu.be/-udJxD9DkA8}{Module 4, Part 2} (20:54)
+\item Static Maps \href{https://youtu.be/fyt7UqYEESs}{Module 4, Part 3}(29:03)
+\end{enumerate}
+
+\end{enumerate}
+\bigskip 
+In class work through exercises: 
+\begin{enumerate}
+\item \href{http://code.r-journalism.com/chapter-5/#section-shape-files}{Shape Files}
+\item \href{http://code.r-journalism.com/chapter-5/#section-small-multiples}{Small Multiples}
+\end{enumerate}
+\bigskip
+\textbf{Wednesday, March 4, 2020\\}
+Review class\\\\
+\textbf{Monday, March 9, 2020\\}
+\emph{Advanced statistics for Journalists}\\
+Why quantify?\\
+Levels of Measurement\\\\
+\textbf{Wednesday, March 11, 2020\\}\\
+\emph{Advanced statistics for Journalists}\\
+Measures of Central Tendency\\\\
+\textbf{Monday, March 16, 2020\\}
+\emph{Advanced statistics for Journalists}\\
+Sampling Error, Central Limit Theorem, Uncertainty\\\\
+\textbf{Wednesday, March 18, 2020\\}
+\emph{Advanced statistics for Journalists}\\
+Causation, Research Design\\\\
+\textbf{Monday, March 23, 2020\\}
+\emph{Advanced statistics for Journalists}\\
+Statistical Significance\\\\
+\textbf{Wednesday, March 25, 2020\\}
+\emph{Advanced statistics for Journalists}\\
+Probability and the Crisis in Science. \\\\
+\textbf{Monday, March 30, 2020\\}
+Review, Wrap up\\\\
+\textbf{Wednesday, April 1, 2020\\}
+FIN!\\
 
 \section*{Course Readings}
-available from the bookstore. 
+Please purchase 
+\fullcite{healy_data_2018} and \fullcite{stray_curious_2016} (available as a coursepack in the bookstore)
 \section*{Software Requirements}
+We will be using three different software packages in this course: R, RStudio and GitHub Desktop. Each of these software packages will be installed for your use on all the computers in OD211. At a basic level, you should be able to complete the course without bringing any personal technology. However, you may find it useful to install this software on your personal computer so that you can work on the course material at your own pace. 
+
+\subsection*{R}
 \begin{enumerate}
-\item Please come with an account created at http://www.github.com. Github is aq leading platform for collaborating on software development projects as well as sharing data and code with the public.  
+\item Visit \url{https://cran.r-project.org/index.html}
+\item Select Download R for (Mac) OS X or Download R for Windows
+\item Select the latest package of R for download and install as you would any regular software. For macs, this involves double-clicking the .pkg file that is downloaded and walking through the steps in the dialogue menu. 
+\end{enumerate}
+
+\subsection*{RStudio }
+
+\begin{enumerate}
+\item Visit \url{https://rstudio.com/products/rstudio/download/}
+\item Select the Free Desktop version; it should direct you to a download screen appropriate to your operating system. 
+\end{enumerate}
+
+\subsection*{GitHub Desktop}
+\begin{enumerate}
+\item Visit \url{https://desktop.github.com/}
+\item Select Download for MacOs or Download for Windows (as appropriate)
+\item Install
+\end{enumerate}
+
+
+
+\begin{enumerate}
+
+\item Please come with an account created at \href{http://www.github.com}. Github is a leading platform for collaborating on software development projects as well as sharing data and code with the public.  
+\item 
 
 \end{enumerate}
 
@@ -86,22 +321,27 @@ available from the bookstore.
 \begin{tabular}{lrr}
 Assignment & Weight & Due Date\\
 \hline
-&	&\\
-&			&\\
-	&		&		\\
-&  &\\
-& & \\
+News Data Visualization Presentation& 10\%	& TBA\\
+Graph of data 			&25 \% & TBA\\
+Map 		& 25\% 		& TBA \\
+Final Exam & 40\%  & TBA\\
+
 
 \end{tabular}
 \end{table}
 
 \subsection*{Assignment Descriptions}
+\subsubsection*{News Data Journalism Visualization Presentation}
+In this assignment students will present a recent example of some kind of data visualization for a news media outlet, either online or in print. Student will present the data visualization to the class and discuss it with the class (pass/fail). 
 
-\begin{enumerate}
-\item 
-\end{enumerate}
+\subsubsection*{Graph of Data}
+In this assignment, students will present one original graph of some kind of data that they find newsworthy. Part of the assignment will include finding the data, importing it into R, manipulating it fairly and as necessary and producing a compelling, attractive graph that communicates a newsworthy pattern. 
 
+\subsubsection*{Map}
+In this assignment, students will present one original map of some kind kind of data that they find newsworthy. Part of the assignment will include finding the data, importing it into R, manipulating it fairly and as necessary and producing a compelling, attractive map that communicates a newsworthy patterns. 
 
+\subsubsection*{Final Exam}
+A final exam will be conducted that covers basic statistical concepts covered in the course and the text \textcite{stray_curious_2016} (see Course Readings).
 
 \section*{Late Submissions}
 

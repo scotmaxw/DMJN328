@@ -51,7 +51,6 @@
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
-      <file>blx-unicode.def</file>
       <file>blx-compat.def</file>
       <file>biblatex.def</file>
       <file>standard.bbx</file>
@@ -80,7 +79,7 @@
       <file>DMJN328_Syllabus.bcf</file>
     </requires>
     <requires type="editable">
-      <file>/Users/Simon/Desktop/simon_library.bib</file>
+      <file>/Users/skiss/OneDrive - Wilfrid Laurier University/Courses/DMJN328/DMJN328.bib</file>
     </requires>
   </external>
 </requests>

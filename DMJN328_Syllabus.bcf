@@ -1992,9 +1992,16 @@
   <!-- CITATION DATA -->
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
-    <bcf:datasource type="file" datatype="bibtex">/Users/Simon/Desktop/simon_library.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex">/Users/skiss/OneDrive - Wilfrid Laurier University/Courses/DMJN328/DMJN328.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">healy_data_2018</bcf:citekey>
+    <bcf:citekey order="2">healy_data_2018</bcf:citekey>
+    <bcf:citekey order="3">healy_data_2018</bcf:citekey>
+    <bcf:citekey order="4">healy_data_2018</bcf:citekey>
+    <bcf:citekey order="5">healy_data_2018</bcf:citekey>
+    <bcf:citekey order="6">stray_curious_2016</bcf:citekey>
+    <bcf:citekey order="7">stray_curious_2016</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
