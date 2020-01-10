@@ -8,7 +8,7 @@ To the best of my knowledge, all of the packages necessary for the course have a
 
 It can take a few minutes to install all these packages, so I'd like you to take a stab at doing that over the weekend, so we can be prepared for class on Monday. Here is how you do it. 
 
-If you look inside the course folder that we cloned to your computer from your repository, you should see a file `install_script.R` and `install_script_with_plots.R`. Here is a screenshot from my own course folder; yours shoud look identical. 
+If you look inside the course folder that we cloned to your computer from your repository, you should see a file `install_script.R` and `install_script_with_plots.R`. Here is a screenshot from my own course folder; yours shoud look very similar to this.  
 
 ![](https://raw.githubusercontent.com/sjkiss/DMJN328/master/images/image4.png)
 
