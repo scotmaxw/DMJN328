@@ -20,7 +20,7 @@ Open them by double-clicking the file DMJN328.Rproj.  This should open RStudio. 
 
 
 
-![width="50"](https://raw.githubusercontent.com/sjkiss/DMJN328/master/images/image6.png)
+![](https://raw.githubusercontent.com/sjkiss/DMJN328/master/images/image6.png)
 
 
 
