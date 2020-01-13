@@ -2,14 +2,27 @@
 
 
 
-1. <u>Optional</u> If you want, and you have been able to get yourself set up, you can work through the materials in Chs. 2 and 3 of Healey. To follow along and get the most out of this material please do the following. 
+## Optional
+
+1. If you want, and you have been able to get yourself set up, you can work through the materials in Chs. 2 and 3 of Healey. To follow along and get the most out of this material please do the following. 
 
 - Use RStudio to open the file dataviz.Rproj in the subfolder DMJN328/dataviz/
+
 - Or, double-click on the file dataviz.Rproj in the subfolder.
-- If you have been able to clone my course repository you should see some .R files like "02_get_started.R" Open this file. 
-- Make a new script file using "File > New R Script" and work through the text, typing the code commands in Ch. 2 and then Ch. 3, and executing each line (command-Return on macs, control-enter on PCs). 
+
+  ![](https://github.com/sjkiss/DMJN328/raw/master/images/dataviz_rproj.png)
+
+- If you have been able to clone my course repository you should see some .R files like "02_get_started.R" Open this file. If you haven't been able to clone my course repository with the updates that I have added, you won't have access to these files. You'll have to get them in a slightly hacky way. 
+
+  - Visit https://github.com/sjkiss/DMJN328/tree/master/dataviz and click on '02_get_started.R' Right-click on "Raw" and select "Save Link As". Save this file In the dataviz subfolder. Then open it with RStudio. 
+
+- Make a new script file using "File > New R Script" and work through the text, typing the code commands in Ch. 2 and then Ch. 3, and executing each line (command-Return on macs, control-enter on PCs). If you get stuck, copy and paste the commands you need from the master file. 
+
 - When you are done, save this script file in the same folder with a meaningful name like "02_get_started_my_copy.R" 
-- Repeat with the file for Ch. 3. 
+
+- Repeat with the file for Ch. 3 'make_a_plot.R'
+
+  - If you need to download it directly from the course page, go to https://github.com/sjkiss/DMJN328/tree/master/dataviz and click on '03_make_a_plot.R', click on "Raw" and select "Save Link As". Save this file in the dataviz subfolder and open with RStudio
 
 2. <u>Required</u> As far as I can tell, everybody is set up to start working on the "Learn R for Journalists" course, as scheduled on Wednesday. It's a bit of a shame to have to skip the optional material in Step 1 (Healey), but all of the material will be covered again, so I think it's best to forge on. 
 
@@ -50,6 +63,8 @@ From there, you should have all the cnecessary course files and folders on the c
 ![](https://github.com/sjkiss/DMJN328/raw/master/images/changed_files.png)
 
 1. Make a commit of these changes by giving a title and a summary. You can commit these changes maybe with the date of your work. Hit "Commit. "
+
+   ![](https://github.com/sjkiss/DMJN328/raw/master/images/commit_to_master.png)
 
 2. Then push these changes to your online repository. 
 
