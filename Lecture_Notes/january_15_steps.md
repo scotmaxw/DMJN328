@@ -32,4 +32,22 @@ If some of you have had issues with your personal computers, you are more than w
 To do this you need to use GitHub Desktop.
 
 1. Sign into GitHub Desktop
-2. Select Clone 
+
+![](https://github.com/sjkiss/DMJN328/raw/master/images/sign_in_github.png)
+
+2. Select Clone Local Repository.
+
+   ![](https://github.com/sjkiss/DMJN328/raw/master/images/clone_repository.png)
+
+   3. Select the repository to clone. Note, your screen will look a little bit different. Choose the path where you want to store the files. If you are working on the Mac computers, you can store this anywhere. 
+
+      
+
+   ![](https://github.com/sjkiss/DMJN328/raw/master/images/repository_to_clone.png)
+
+From there, you should have all the cnecessary course files and folders on the computer you are working on. The only thing that you should do is backup your work. The way to do that is to go to the main GitHub Desktop screen and you should see a list of new or modified files like this:
+
+
+
+
+
