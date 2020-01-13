@@ -49,5 +49,11 @@ From there, you should have all the cnecessary course files and folders on the c
 
 
 
+1. Make a commit of these changes by giving a title and a summary. You can commit these changes maybe with the date of your work. Hit "Commit. "
+
+   
+
+2. Then push these changes to your online repository. 
+
 
 
