@@ -14,7 +14,9 @@
 
 - If you have been able to clone my course repository you should see some .R files like "02_get_started.R" Open this file. If you haven't been able to clone my course repository with the updates that I have added, you won't have access to these files. You'll have to get them in a slightly hacky way. 
 
-  - Visit https://github.com/sjkiss/DMJN328/tree/master/dataviz and click on '02_get_started.R' Right-click on "Raw" and select "Save Link As". Save this file In the dataviz subfolder. Then open it with RStudio. 
+  - Visit https://github.com/sjkiss/DMJN328/tree/master/dataviz and click on '02_get_started.R' Right-click on "Raw" and select "Save Link As". Save this file In the dataviz subfolder. Then open it with RStudio.
+
+    ![](https://github.com/sjkiss/DMJN328/raw/master/images/raw_save_link_as.png) 
 
 - Make a new script file using "File > New R Script" and work through the text, typing the code commands in Ch. 2 and then Ch. 3, and executing each line (command-Return on macs, control-enter on PCs). If you get stuck, copy and paste the commands you need from the master file. 
 
@@ -24,14 +26,17 @@
 
   - If you need to download it directly from the course page, go to https://github.com/sjkiss/DMJN328/tree/master/dataviz and click on '03_make_a_plot.R', click on "Raw" and select "Save Link As". Save this file in the dataviz subfolder and open with RStudio
 
-2. <u>Required</u> As far as I can tell, everybody is set up to start working on the "Learn R for Journalists" course, as scheduled on Wednesday. It's a bit of a shame to have to skip the optional material in Step 1 (Healey), but all of the material will be covered again, so I think it's best to forge on. 
+## Required
+
+1. As far as I can tell, everybody is set up to start working on the "Learn R for Journalists" course, as scheduled on Wednesday. It's a bit of a shame to have to skip the optional material in Step 1 (Healey), but all of the material will be covered again, so I think it's best to forge on. 
 
    Here is the most user friendly way to get follow along with the videos. 
 
 - In the course folder, you will find a folder called "learnr_journalism". In that folder, are subfolders for each chapter of the course. Open "learnr_chapter-1-master"
 - There, you will find "learn-chapter-1.Rproj". Open this file with RStudio or double-click it. 
 - Open the file "intro_to_r/intro_to_r.R". This is the code that goes along with the video "Introduction to R". Use this file as a support for you as you watch the video.
-- Note: Please delete the line that asks you to set a working directory. `setwd("~/projects/learn-r-journalism")`
+- Note: Please delete the line that asks you to set a working directory. `setwd("~/projects/learn-r-journalism")` If you accidentally run this line, close down RStudio, re-open it with the 
+  learn-chapter-1.Rproj" to reset the working directory to be where we want it to be. 
 - Make a new R file for yourself "File > New R Script". Use this R script and try to type along with the video. If you get stuck, cut and paste what you need from the file "intro_to_r.R". When you are done, save this something like "Intro_r_my_copy.R"
 
 Then, do the same thing for the video "Data Structures in R". 
