@@ -34,20 +34,24 @@
 
 - In the course folder, you will find a folder called "learnr_journalism". In that folder, are subfolders for each chapter of the course. Open "learnr_chapter-1-master"There, you will find "learn-chapter-1.Rproj". Open this file with RStudio or double-click it. 
 
-  
+  ![](https://github.com/sjkiss/DMJN328/raw/master/images/learnr_chapter_1_project_image.png)
 
 - Open the file "intro_to_r/intro_to_r.R". This is the code that goes along with the video "Introduction to R". Use this file as a support for you as you watch the video.
 
-  
+  ![](https://github.com/sjkiss/DMJN328/raw/master/images/file_intro_to_r.png)
 
 - Note: Please delete the line that asks you to set a working directory. `setwd("~/projects/learn-r-journalism")` If you accidentally run this line, close down RStudio, re-open it with the 
   learn-chapter-1.Rproj" to reset the working directory to be where we want it to be. 
 
 - Make a new R file for yourself "File > New R Script". Use this R script and try to type along with the video. If you get stuck, cut and paste what you need from the file "intro_to_r.R". When you are done, save this something like "Intro_r_my_copy.R"
 
-Then, do the same thing for the video "Data Structures in R". 
+After completing this video, do the same for the video "Data Structures in R"
 
 - Open the file "intial_exploration/intial_exploration.R" and use this as your master file for the video "Data Structures in R". Again, try to follow along with the video, typing the code as best you can. 
+
+  ![](https://github.com/sjkiss/DMJN328/raw/master/images/file_intitial_exploration.png)
+
+
 
 ## Using the Mac Lab computers
 
