@@ -47,13 +47,13 @@ To do this you need to use GitHub Desktop.
 
 From there, you should have all the cnecessary course files and folders on the computer you are working on. The only thing that you should do is backup your work. The way to do that is to go to the main GitHub Desktop screen and you should see a list of new or modified files like this:
 
-
+![](https://github.com/sjkiss/DMJN328/raw/master/images/changed_files.png)
 
 1. Make a commit of these changes by giving a title and a summary. You can commit these changes maybe with the date of your work. Hit "Commit. "
 
-   
-
 2. Then push these changes to your online repository. 
+
+   ![](https://github.com/sjkiss/DMJN328/raw/master/images/push_changes.png)
 
 
 
