@@ -18,7 +18,7 @@ Now, even though your forked repository and the central course repository are se
 
    
 
-   ![sign_in_with_github_preferences](/Users/skiss/Desktop/sign_in_with_github_preferences.png)
+   ![](/Users/skiss/Desktop/sign_in_with_github_preferences.png)
 
    
 
