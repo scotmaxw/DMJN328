@@ -10,7 +10,9 @@ We've already been through all this.
 
 One more term I should introduce here is a **branch**. A branch is basically exactly like using the "Save As" function to save a Microsoft Word document. So you could have your master (or first) branch called "my paper", then in order to work on it a little bit you could save your document as "my paper 2". GitHub has a nice little bit of functionality that lets you very easily merge any changes in "my paper 2" back into "my paper". 
 
-Now, even though your forked repository and the central course repository are separate, GitHub is still very usefully tracking changes for you on the central course repository. That means that as I make changes to the central course repository (e.g. for example, adding some of the lecture notes, or that sample data set), here are the steps you can take to get them into your own version of your repository yourself. . 
+Now, even though your forked repository and the central course repository are separate, GitHub is still very usefully tracking changes for you on the central course repository. That means that as I make changes to the central course repository (e.g. adding some of the lecture notes, or that sample Napoleon data set), you can track those and have access to them as the course progresses. 
+
+Here are the steps you can take to get them into your own version of your repository yourself. . 
 
 1. In GitHub Desktop, be sure you are signed in to GitHub, by clicking on "GitHub Desktop > Preferences" 
 
@@ -26,11 +28,11 @@ Now, even though your forked repository and the central course repository are se
 
    ![](https://raw.githubusercontent.com/sjkiss/DMJN328/master/Using_github/click_current_branch_master.png)
 
-3. You will see two different "branches" a "Default Branch" and a branch called "upstream/master". The **default branch** is just your copy of your repository on your machine. But the branch **upstream/master** is the master branch on the repository that you forked your copy from. 
+3. You *should* see two different "branches" a "Default Branch" and a branch called "upstream/master". The **default branch** is just your copy of your repository on your machine. But the branch **upstream/master** is the master branch on the repository that you forked your copy from. 
 
    ![](https://raw.githubusercontent.com/sjkiss/DMJN328/master/Using_github/show_upstream_master.png)
 
-4. Click on "Choose a branch to merge into master" **at the bottom of your screen**. 
+4. Click on "Choose a branch to merge into master" **at the bottom of this screen**. 
 
    ![](https://raw.githubusercontent.com/sjkiss/DMJN328/master/Using_github/choose_branch_to_merge.png)
 
