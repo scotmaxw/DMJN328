@@ -16,15 +16,41 @@ Now, even though your forked repository and the central course repository are se
 
    
 
-2. Click on the "Current Branch - Master tab" in the top-center of your screen. 
+   
+
+   ![sign_in_with_github_preferences](/Users/skiss/Desktop/sign_in_with_github_preferences.png)
 
    
 
+2. Click on the "Current Branch - Master tab" in the top-center of your screen. 
+
+   ![](https://raw.githubusercontent.com/sjkiss/DMJN328/master/Using_github/click_current_branch_master.png)
+
 3. You will see two different "branches" a "Default Branch" and a branch called "upstream/master". The **default branch** is just your copy of your repository on your machine. But the branch **upstream/master** is the master branch on the repository that you forked your copy from. 
 
-4. Click on "Choose a branch to merge into master" at the bottom of your screen.. 
+   ![](https://raw.githubusercontent.com/sjkiss/DMJN328/master/Using_github/show_upstream_master.png)
+
+4. Click on "Choose a branch to merge into master" **at the bottom of your screen**. 
+
+   ![](https://raw.githubusercontent.com/sjkiss/DMJN328/master/Using_github/choose_branch_to_merge.png)
+
+   
 
 5. Then, select **upstream/master** and then click **Merge upstream/master into master** This will **pull** any changes I have made to the central repository (called **upstream/master**) down to your local, forked repository on your computer (just called **master**). Please note: You may get an error message here about some conflicts between files. AT this point, the best thing to do is to take note of the file names **and delete them from your course repository on your computer**. Don't worry about it. 
 
-6. **There is one last thing to do.** Any changes I have made are on your local, forked repository, but they are not on **your** remote repository in the cloud. To finish that, you should **commit** your changes with a message and then **push** them up to the cloud. 
+![](https://raw.githubusercontent.com/sjkiss/DMJN328/master/Using_github/select_merge_master_into_master.png)
+
+
+
+6. **There is one last thing to do.** Any changes I have made are now merged into your on your **local, forked repository,** but they are not on **your** remote repository in the cloud. To finish that, you should **commit** your changes with a message and then **push** them up to the cloud. 
+
+   ![](https://raw.githubusercontent.com/sjkiss/DMJN328/master/Using_github/make_commits.png)
+
+
+
+Then, after making the commits, push the changes up to your repository. 
+
+
+
+![](https://raw.githubusercontent.com/sjkiss/DMJN328/master/Using_github/push_changes_to_origin.png)
 
