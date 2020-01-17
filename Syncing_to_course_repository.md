@@ -26,5 +26,5 @@ Now, even though your forked repository and the central course repository are se
 
 5. Then, select **upstream/master** and then click **Merge upstream/master into master** This will **pull** any changes I have made to the central repository (called **upstream/master**) down to your local, forked repository on your computer (just called **master**). Please note: You may get an error message here about some conflicts between files. AT this point, the best thing to do is to take note of the file names **and delete them from your course repository on your computer**. Don't worry about it. 
 
-6. **There is one last thing to do.** Any changes I have made are on your local, forked repository, but they are not on **your** remote repository in the cloud. To finish that, you should select "push origin" in the top right of the screen. 
+6. **There is one last thing to do.** Any changes I have made are on your local, forked repository, but they are not on **your** remote repository in the cloud. To finish that, you should **commit** your changes with a message and then **push** them up to the cloud. 
 
