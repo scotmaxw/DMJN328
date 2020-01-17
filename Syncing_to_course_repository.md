@@ -22,11 +22,9 @@ Now, even though your forked repository and the central course repository are se
 
 3. You will see two different "branches" a "Default Branch" and a branch called "upstream/master". The **default branch** is just your copy of your repository on your machine. But the branch **upstream/master** is the master branch on the repository that you forked your copy from. 
 
-4. Click on "Choose a branch to merge into master" at the bottom. 
+4. Click on "Choose a branch to merge into master" at the bottom of your screen.. 
 
-5. There, select **upstream/master**
+5. Then, select **upstream/master** and then click **Merge upstream/master into master** This will **pull** any changes I have made to the central repository (called **upstream/master**) down to your local, forked repository on your computer (just called **master**). Please note: You may get an error message here about some conflicts between files. AT this point, the best thing to do is to take note of the file names **and delete them from your course repository on your computer**. Don't worry about it. 
 
-6. This will **pull** any changes I have made to the central repository down to your local, forked repository on your computer.
-
-7. There is one last thing to do. Any changes I have made are on your local, forked repository, but they are not on **your** remote repository in the cloud. To finish that, you should select "push origin" in the top right of the screen. 
+6. **There is one last thing to do.** Any changes I have made are on your local, forked repository, but they are not on **your** remote repository in the cloud. To finish that, you should select "push origin" in the top right of the screen. 
 
