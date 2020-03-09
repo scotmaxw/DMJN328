@@ -55,5 +55,5 @@
 #### Cancensus Package
 
 1. [Tutorial is here](https://github.com/mountainMath/cancensus)
-2. Class tutorial is [here](http://www.github.com/sjkiss/DMJN328)
+2. Class tutorial is [here](https://raw.githubusercontent.com/sjkiss/DMJN328/master/map_assignment/cancensus_tutorial.R)
 3. Requires signing up and getting an API here (https://censusmapper.ca/users/sign_up)

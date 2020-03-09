@@ -1,8 +1,3 @@
-#load library
-library(cancensus)
-#Get api key
-options(cancensus.api_key='CensusMapper_287500bb91a374ec69fdcf270fb20ff7')
-
 #1. Go to census mapper and select "Region Selection"
 #2. Try to select the census sub-division of Kitchener 
 #3. Select "Overview"
