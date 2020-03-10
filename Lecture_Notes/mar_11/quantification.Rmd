@@ -1,0 +1,17 @@
+---
+title: "Quanitification"
+author: "Simon J. Kiss"
+date: "10/03/2020"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+```{r}
+
+```
+
+
