@@ -1,12 +1,9 @@
-library(cancensus)
-library(tidyverse)
-getwd()
 
-#setwd()
-setwd('Lecture_Notes/mar_11/')
-#Load in the haven library to read in .sav fils 
+library(tidyverse)
+
+
 #REad in the lfs data
-lfs<-read.csv('data/lfs.csv', stringsAsFactors = F)
+lfs<-read.csv('https://github.com/sjkiss/DMJN328/raw/master/Lecture_Notes/mar_11/data/lfs.csv', stringsAsFactors = F)
 
 #use the technical documentation to find the variable names for sex and earnings. 
 lfs %>% 
