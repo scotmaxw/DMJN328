@@ -14,7 +14,7 @@ lfs %>%
   select(, ) %>% 
   #Calculate the average hourly wage and the median 
   group_by() %>% 
-  summarize(avg=), median=)
+  summarize(avg=, median=)
 
 #Use the technical documentation to find the variable label for education 
 #What is the modal level of education. Use the table() command. 
