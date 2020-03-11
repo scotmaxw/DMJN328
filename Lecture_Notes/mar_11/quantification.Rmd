@@ -1,5 +1,5 @@
 ---
-title: "Quanitification"
+title: "Quantification"
 author: "Simon J. Kiss"
 date: "10/03/2020"
 output: slidy_presentation
@@ -9,7 +9,7 @@ output: slidy_presentation
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Quantification
+# Quantification and Levels of Measurement
 1. Concepts
 2. Variables
 3. Operationalization
