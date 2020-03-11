@@ -21,10 +21,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Concepts
 Try to define these concepts. 
-- Income
-- Wealth
-- Sex / Gender
-- Province of residence
+
+1. Income
+1. Wealth
+3. Sex / Gender
+3. Province of residence
 
 # Variables
 - Real existing, concrete bits of information

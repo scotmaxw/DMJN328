@@ -1,7 +1,11 @@
 
 library(tidyverse)
-
-
+library(haven)
+lfs<-read_sav('https://github.com/sjkiss/DMJN328/raw/master/Lecture_Notes/mar_11/data/lfs.sav')
+library(labelled)
+look_for(lfs, "hours")
+lfs %>% 
+  ggplot(., aes(x=AHRSMAIN))+geom_histogram()
 #REad in the lfs data
 lfs<-read.csv('https://github.com/sjkiss/DMJN328/raw/master/Lecture_Notes/mar_11/data/lfs.csv', stringsAsFactors = F)
 
