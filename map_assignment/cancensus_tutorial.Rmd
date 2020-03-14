@@ -3,13 +3,13 @@ title: "Using Census Mapper"
 author: "Simon J. Kiss"
 date: "13/03/2020"
 output: 
-   pdf_document: default
+   bookdown::pdf_document2: default
 number_sections: true
 ---
 
 ```{r setup, include=FALSE}
 library(knitr)
-knitr::opts_chunk$set(echo = TRUE, results='markup', eval=T, message=F, tidy=T, warning=F, fig.width=3, fig.height=3, fig.align='center', include=T, out.width="50%")
+knitr::opts_chunk$set(echo = TRUE, results='markup', out.width="75%", eval=T, message=F, warning=F, fig.width=3, fig.height=3, fig.align='center', include=T, dpi=150)
 ```
 
 
@@ -18,18 +18,24 @@ As I mentioned in class the other data, Statistics CAnada has a systematic - but
 
 One way is: 
 
-    1.(PR) Province
-    2. (CD) Census District (or Division, I've seen both) 
+1. (PR) Province
+
+2. (CD) Census District (or Division, I've seen both) 
+
 > "Group of neighbouring municipalities joined together for the purposes of regional planning and managing common services (such as police or ambulance services). These groupings are established under laws in effect in certain provinces of Canada. Census division (CD) is the general term for provincially legislated areas (such as county, municipalité régionale de comté and regional district) or their equivalents." 
 `r tufte::quote_footer('--- [Statistics Canada](https://www12.statcan.gc.ca/census-recensement/2016/ref/dict/geo008-eng.cfm)')`
-    
-    3. Census Subdivision (CSD)
-         * These vary by province. In ONtario, these are cities, Indian Reserves, or municipalities (e.g. townships, I think)
-    
-    4. Census Tracts (CSD)
+
+3. Census Subdivision (CSD)
+
+4. Census Tracts (CSD)
 
 > "Area that is small and relatively stable. Census tracts usually have a population between 2,500 and 8,000 persons. They are located in census metropolitan areas and in census agglomerations that have a core population of 50,000 or more."
 `r tufte::quote_footer('--- [Statistics Canada](https://www12.statcan.gc.ca/census-recensement/2011/ref/dict/geo013-eng.cfm)')`
+
+5. Dissemination Areas (DA)
+
+> "A dissemination area (DA) is a small, relatively stable geographic unit composed of one or more adjacent dissemination blocks. It is the smallest standard geographic area for which all census data are disseminated. DAs cover all the territory of Canada." 
+`r tufte::quote_footer('--- [Statistics Canada](https://www150.statcan.gc.ca/n1/pub/92-195-x/2011001/geo/da-ad/def-eng.htm)')`
 
 In addition, there are other categories that reflect a parallel hierarchy. Probably the most important of these are: Census Metropolitan Areas and Census Agglomerations. 
 
@@ -46,12 +52,13 @@ This allows for merging to add data to geography files.
 
 # Getting a folder for your map assignment
 
-As with everything in this course, it is very useful to set up a folder with an RStudio project folder specifically for your map assignment. I have already actually created one on the course GitHub page. If you are able to to pull changes from the DMJN328 course page in GitHub, by following the instructions [here](https://github.com/sjkiss/DMJN328/raw/master/Using_github/syncing_to_course_repository.pdf), then you should see a folder called "map assignment" in your course folder. 
+As with everything in this course, it is very useful to set up a folder with an RStudio project folder specifically for your map assignment. I have already actually created one on the course GitHub page. If you are able to to pull changes from the DMJN328 course page in GitHub, by following the instructions [here](https://github.com/sjkiss/DMJN328/raw/master/Using_github/syncing_to_course_repository.pdf), then you should see a folder called "map assignment" in your course folder (see Figure \@ref(fig:map)). 
 
 
-```{r map, echo=F, include=T, out.width="50%"}
 
-knitr::include_graphics("images/map_assignment.png")
+```{r map, echo=F, include=T,fig.cap="The map assignemnt folder."}
+
+knitr::include_graphics("images/map_assignment.png", dpi=150)
 
 ```
 
@@ -75,22 +82,22 @@ You can start with these commands to install census mapper and load the library.
 Note, any code snippets that appear in this document are formatted so that you should be able to copy and paste them into an R script.
 
 ```{r, eval=F, echo=T}
-install.packages('censusmapper')
-library(censusmapper)
+install.packages('cancensus')
+library(cancensus)
 ```
 
 ## Getting an API
-While it is free and open source, it is necessary to register for an API. Click on the top-right of the website to login and get an API.
+While it is free and open source, it is necessary to register for an API. Click on the top-right of the website to login and get an API (see Figure \@ref(fig:api)).
 
-```{r api}
+```{r api, fig.cap="Getting an API", echo=F}
 include_graphics("images/get_api.png")
 ```
 
 
-The API should look something like this.
+The API should look something like this (see Figure \@ref(fig:api2)).
 
-```{r api2}
-include_graphics("https://raw.githubusercontent.com/sjkiss/DMJN328/master/images/api.png")
+```{r api2, fig.cap="What an API looks like.", echo=F}
+include_graphics("images/api.png")
 ```
 
 
@@ -121,10 +128,10 @@ The following command opens `.Rprofile` (or makes it if it does not already exis
 file.edit(file.path('~/.Rprofile'))
 ```
 
-This is what mine looks like.
+Figure \@ref(fig:r-profile-image) is what mine looks like.
 Lines 1:3 are just notes for myself, line 4 is a little command that I use frequently and lines 5 and 6 are my cancensus options.
 
-```{r r-profile-image}
+```{r r-profile-image, echo=F, fig.cap="Simon's .Rprofile file, as an example"}
 include_graphics("images/rprofile.png")
 ```
 
@@ -172,9 +179,9 @@ To select the geographic area you want to work with, play with the cursor to zoo
 
 If you click on "Region Selection" you can zoom quickly to different levels of geography, e.g. Province, census division, census sub-division, census metropolitan area, whatever. I find this convenient.
 
-When you have a geographic boundary area that you are interested in playing with, select it and it should turn *blue*. If you click the same area again, it should deselct the region.  this is what it looks like if you have selected Ontario.
+When you have a geographic boundary area that you are interested in playing with, select it and it should turn *blue*. If you click the same area again, it should deselct the region.  Figure \@ref(fig:select-ontario) is what it looks like if you have selected Ontario.
 
-```{r select-ontario}
+```{r select-ontario, echo=F, fig.cap="Selecting an area."}
 include_graphics("images/selecting_ontario.png")
 ```
 
@@ -184,9 +191,9 @@ Please note: when you select a geographic region, you will still be able to get 
 
 So this is a choice you get to make. One thing to keep in mind, the larger the geographic unit that you select, the more data you will be downloading.
 
-I am going to select Kitchener, so I'm going to zoom in on the Census Metropolitan Area level, drag the map to about the KW area and select Kitchener.
+I am going to select Kitchener, so I'm going to zoom in on the Census Metropolitan Area level, drag the map to about the KW area and select Kitchener (see Figure \@ref(fig:select-kitchener)).
 
-```{r select-kitchener}
+```{r select-kitchener, echo=F, fig.cap="Selecting Kitchener"}
 include_graphics("images/select_kitchener.png")
 ```
 
@@ -194,9 +201,9 @@ include_graphics("images/select_kitchener.png")
 
 Note that I had to select "Clear Selection" first to deselect Ontario, and then select "Kitchener".
 
-If I jump over to "Overview" I'm going to get a screen that looks below. There's some useful information here.
+If I jump over to "Overview" I'm going to get a screen that looks like Figure (\@ref(fig:overview) (below). There's some useful information here.
 
-```{r overview}
+```{r overview, fig.cap="Looking at the overview", echo=F}
 include_graphics("images/select_region.png")
 ```
 
@@ -205,7 +212,7 @@ Notice under "Selected Variables" it says `vectors=[]`.  That is because we have
 
 And under "Selected Regions", it says that we have selected Kitchener (CY) and that `regions={"CSD":["3530013"]}. The `regions` stuff is code for Census Subdivision (CSD) 3530013.
 
-The more you play with STatistics Canada's data, the more you will learn how it works, but basically, the CSD code is made of a province code (Ontario  = 35), a two-digit Census Division code (Waterloo Region = 30) and a 3-digit Census Sub-division code (City of Kitchener = 013).
+The more you play with Statistics Canada's data, the more you will learn how it works, but basically, the CSD code is made of a province code (Ontario  = 35), a two-digit Census Division code (Waterloo Region = 30) and a 3-digit Census Sub-division code (City of Kitchener = 013).
 
 So, Statistics Canada has a very systematic way of coding Canada's geography. Kitchener is always through all of StatsCan's data coded as 35300013.
 
@@ -219,9 +226,9 @@ Obviously option 3 will give us the most fine-grained view of the City of Kitche
 
 I raised this in class the ohter day, but in looking at it, I see that there actually is quite a lot of data. So, let's do it.
 
-Let's select DA.
+Let's select DA (see Figure \@ref(fig:select-dissemnination-area)).
 
-```{r select-dissemnination-area}
+```{r select-dissemnination-area,fig.cap="Selecting Dissemination Areas", echo=F}
 include_graphics("images/selecting_dissemination_areas.png")
 ```
 
@@ -229,7 +236,7 @@ include_graphics("images/selecting_dissemination_areas.png")
 
 Then go back to overview. If you look at the bottom, there is some R code there and it should look just like this.
 
-```{r r-code, eval=F}
+```{r r-code, eval=F, tidy=T}
 census_data <- get_census(dataset='CA16', regions=list(CSD="3530013"), vectors=c(), labels="detailed", geo_format=NA, level='DA')
 ```
 
@@ -242,7 +249,7 @@ library(cancensus)
 ```
 
 
-```{r get-kitchener-data, eval=T, echo=T, results="hide"}
+```{r get-kitchener-data, eval=T, echo=T,tidy=T, results="hide"}
 #Instead of saving it as census_data, I am saving it as kitchener, for ease of memory.
 #dataset=CA16 says get data or boundary files from the 2016 Census
 kitchener<- get_census(dataset='CA16',
@@ -252,7 +259,7 @@ geo_format="sf", level='DA')
 
 This should leave us with an object called `kitchener` in our environment.
 
-Try this command.
+Try this command. Note: loading the `tidyverse` library is necessary to run commands like `glimpse()`, `gather()` and `ggplot()`.
 
 ```{r glimpse-kitchener, eval=T, results="markup", echo=T}
 library(tidyverse)
@@ -296,9 +303,9 @@ The next section talks about how to add different variables, other than populati
 
 ## Data
 
-go back to the web browser and click on "Variable Selection" Honestly, this product is so incredible it kind of makes your head spin. Bear with me.
+go back to the web browser and click on "Variable Selection" Honestly, this product is so incredible it kind of makes your head spin (see \@ref(fig:kitchener-variables)). Bear with me.
 
-```{r kitchener-variables}
+```{r kitchener-variables, fig.cap="Selecting variables to map on Kitchener"}
 include_graphics("images/select_kitchener_variables.png")
 
 ```
@@ -333,16 +340,16 @@ For now, let's just select the vector that has the total number of 0 to 4 year o
 Go back to the `Overview` screen and you'll see R code again. It should look like this.
 
 
-```{r dummy-variable-data, eval=F}
+```{r dummy-variable-data, eval=F, tidy=T}
 census_data <- get_census(dataset='CA16', regions=list(CSD="3530013"), vectors=c("v_CA16_4"), labels="detailed", geo_format=NA, level='DA')
 
 ```
 
 Notice that this is exactly the same code as above; the only difference is that the `vectors` argument actually has something in it; namely `v_CA16_`, which is the total age vector.
 
-I'm going to modify the code a little bit. We'll call the new dataframe `kitchener` again and remember you have to specify which geographical file format you want.
+I'm going to modify the code a little bit. We'll call the new dataframe `kitchener2` and remember you have to specify which geographical file format you want.
 
-```{r modify-variable-code, eval=T,results="markup"}
+```{r modify-variable-code, eval=T,results="hide", tidy=T}
 kitchener2 <- get_census(dataset='CA16', regions=list(CSD="3530013"), vectors=c("v_CA16_4"), labels="detailed", geo_format="sf", level='DA')
 
 ```
@@ -403,15 +410,12 @@ We use the `mutate()` command to make a new variable. The following two ways are
 ```{r make-percent, eval=T, echo=T, results="hide"}
 #Option 1 without pipes
 kitchener4<-mutate(kitchener3, percent=(Toddlers/Population)*100)
-
 #option 2 with pipes
 kitchener4<-kitchener3 %>%
   mutate(percent=(Toddlers/Population*100))
-
 #option 2a with pipes
-
-kitchener3 %>%
-  mutate(percent=(Toddlers/Population*100))->kitchener4
+kitchener3 %>% 
+  mutate(percent=(Toddlers/Population)*100)->kitchener4
 ```
 
 Then we can redraw using the exact same code. Note that our `fill` variable is different now though, because we are not filling based on the number of Toddlers, but the percent variable that we created above.
@@ -431,12 +435,13 @@ The only variable that is almost always crosstabbed is sex. So we can always go 
 
 The R code looks like this. Note this is the exact code to download the Kitchener data as above. I've just changed the vector numbers and saved this in `kitchener5`
 
-```{r, eval=T, results="hide", echo=T}
-kitchener5 <- get_census(dataset='CA16', regions=list(CSD="3530013"), vectors=c("v_CA16_9","v_CA16_8"), labels="detailed", geo_format="sf", level='DA')
+```{r, eval=T, results="hide", echo=T, tidy=T}
+kitchener5 <- get_census(dataset='CA16', regions=list(CSD="3530013"), vectors=c("v_CA16_9","v_CA16_8"), 
+labels="detailed", geo_format="sf", level='DA')
 ```
 Note, how we're getting two new vectors.
 
-```{r toddlers-sex, echo=T, results="asis", eval=T}
+```{r toddlers-sex, echo=T, results="markup", eval=T}
 glimpse(kitchener5)
 ```
 Those variable names are ugly so we should rename them again. If we go back to the website, we know that vector `v_CA16_9` is females and vector `v_CA16_8` is males.
