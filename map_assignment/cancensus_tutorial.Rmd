@@ -502,25 +502,25 @@ ggplot(kitchener7, aes(geometry=geometry, fill=n))+
   geom_sf()+
   facet_wrap(~Sex)
 ```
-### Other Sources of Geographical Data
+## Other Sources of Geographical Data
 
 The census is not the only source of data out there, not by a long shot. Statistics Canada does a lot of other surveys, some of the students have encountered these. The major issue with those is that Statistics Canada does not publish results down to the very narrow geographical areas that we played with above. 
 
 A way to search for some of these is to go to Statistids Canada'as Cansim website, through the Laurier library (see Figure \@ref(fig:cansim)). 
 
-```{r cansim}
+```{r cansim, echo=F, fig.cap="Finding Cansim"}
 include_graphics("images/library_cansim.png") 
 ```
 
 From there, select "Cansim" (See Figure \@ref(fig:cansim2) )
 
-```{r cansim2}
+```{r cansim2, echo=F, fig.cap="Finding Cansim"}
 include_graphics("images/cansim.png") 
 ```
 
 If you look on the left, you can filter the vasta array of cansim datasets by geography (see Figure  \@ref(fig:geography)) . The number on the right of each category refers to the number of data products available for each geographical level. So there are over 2,000 tables at the provincial level, 532 at the Census Metropolitan Level, 158 at the Census Division level (e.g. regional municipalities), 115 at the Census Subdivision level only 18 that publish data at the census tract level and only 7 at the dissemination level. 
 
-```{r geography}
+```{r geography, echo=F, fig.cap="Statistics Canada's Geographical Data sets"}
 include_graphics("images/cansim_geographic_areas.png") 
 ```
 
