@@ -2,9 +2,8 @@
 title: "Measures of Central Tendency and Dispersion"
 author: "Simon J. Kiss"
 date: "17/03/2020"
-output: slidy_presentation
-editor_options: 
-  chunk_output_type: inline
+output:
+  slidy_presentation: default
 ---
 
 ```{r setup, include=FALSE,purl=F ,echo=F, results="hide"}
@@ -39,7 +38,7 @@ options(knitr.duplicate.label = 'allow')
 - describing where the centre of a set of data is is pretty useful
 
 # Mean
-- most common measure of central tendency 
+- most common measure of central tendency
 
 $\overline{x}=\frac{\sum_{i=1}^{N}x_{i}}{N}$
 
@@ -49,7 +48,7 @@ Load data from the Labour Force Survey
 
 - These data are stored in a file-format called `sav` which is really common in the social sciences
 - loading the `haven` library provides the `read_sav()` command to read it in
-- loading the `labelled` library lets us search through variables quickly 
+- loading the `labelled` library lets us search through variables quickly
 
 # Mean
 ## Example
@@ -82,7 +81,7 @@ look_for(lfs, "sex")
 
 ```{r visualize-wages}
 library(tidyverse)
-lfs %>% 
+lfs %>%
   ggplot(., aes(x=HRLYEARN))+geom_histogram()
 ```
 
@@ -95,7 +94,7 @@ mean(lfs$HRLYEARN, na.rm=T)
 # Mean
 ## Means by group
 ```{r mean-by-group}
-lfs %>% 
+lfs %>%
 ggplot(., aes(x=HRLYEARN))+geom_histogram()+facet_wrap(~as_factor(SEX))
 
 ```
@@ -103,8 +102,8 @@ ggplot(., aes(x=HRLYEARN))+geom_histogram()+facet_wrap(~as_factor(SEX))
 # Mean
 ## Means by group
 ```{r show-means-by-sex}
-lfs %>% 
-group_by(SEX) %>% 
+lfs %>%
+group_by(SEX) %>%
 summarize(avg=mean(HRLYEARN, na.rm=T))
 ```
 
@@ -120,15 +119,15 @@ mean(vector2)
 
 # Median
 - Median is a different measure of central tendency
-- The value at which half of a variable is above, half is below. 
+- The value at which half of a variable is above, half is below.
 
 ```{r show-median-of-hourly-wages}
-lfs %>% 
-  group_by(SEX) %>% 
+lfs %>%
+  group_by(SEX) %>%
   summarize(median=median(HRLYEARN, na.rm=T))
 ```
 
-# Median 
+# Median
 - median is immune to outliers
 ```{r show-media-vectors}
 median(vector1)
@@ -169,9 +168,9 @@ df<-data.frame(class1, class2)
 # Measures of Dispersion
 ## Variance
 ```{r graph-different-variances}
-df %>% 
+df %>%
   #gather into Class and Grade
-  gather(Class, Grade) %>% 
+  gather(Class, Grade) %>%
   #Graph and facet
   ggplot(., aes(x=Grade))+geom_histogram()+facet_wrap(~Class)
 ```
@@ -179,7 +178,7 @@ df %>%
 # Measures of Dispersion
 - different spreads have very different real-life consequences
 
-```{r include-flatten-thecurve, purl=F, echo=F}
+```{r include-flatten-thecurve, purl=F, echo=F, eval=T}
 include_graphics("images/flatten_the_curve.jpg")
 ```
 
@@ -188,15 +187,15 @@ include_graphics("images/flatten_the_curve.jpg")
 1. Subtract the average from each value
 2. Square it to get rid of the negatives
 3. Sum everything up
-4. divide by the sample size. 
+4. divide by the sample size.
 
 # Measures of Dispersion
 ## Variance
-$$ 
+$$
 s^2 = \textrm{sample variance}\\
 \sum = \textrm{sum everything from the bottom to the top}\\
 \overline{x} = \textrm{sample average}\\
-N = \textrm{sample size}
+N = \textrm{sample size}\\
 $$
 
 $$s^2=\frac{\sum\limits_{i=1}^N{(x_i-\overline{x})}^2}{N-1}$$
@@ -225,19 +224,23 @@ var(lfs$HRLYEARN, na.rm=T)
 $$s=\sqrt{\frac{\sum\limits_{i=1}^N{(x_i-\overline{x})}^2}{N-1}}$$
 
 
-- Commonly we talk about something being 1 standard deviation away, or two standard deviations away. 
-- Standard deviation is a number that describes the averge distance from the average in the units that variable is taken. 
+- Commonly we talk about something being 1 standard deviation away, or two standard deviations away.
+- Standard deviation is a number that describes the averge distance from the average in the units that variable is taken.
 
 # Distributions
 - Data come in different types (categorical, numeric)
 - there are different processes in the universe that generate data
-- data follow different distributions 
+- data follow different distributions
     * Recall from ** The Joy of Stats** the importance of a distribution
 
 # Distributions
 1. Normal distribution
     - mean = median = mode
     - contstantly reoccurring pattern in nature
+
+# Distributions
+1. Normal distribution
+
 ```{r show-normal}
 #use rnorm to generate 10000 random numbers according to the normal distribution
 #mean of 1000 and standard deviation of 500
@@ -253,13 +256,16 @@ ggplot(df, aes(x=var1))+geom_histogram()+theme_bw()+labs(title="Randomly Generat
 # Distributions
 2. Uniform Distribution
     - numbers on a die
+
+# Distributions
+2. Uniform Distribution
 ```{r show-uniform}
 #Sample a number from 1 to 6 (like on a die roll), 10000 times
 var1<-sample(1:6, 10000, replace=T)
 #turn into a dataframe (die)
 die<-data.frame(var1)
-#Graph as a 
-ggplot(df, aes(x=var1))+
+#Graph as a
+ggplot(die, aes(x=var1))+
   #as a barplot, counting the numbr of times each number occurs
   geom_bar(stat="count")+
   #turn it black and white
@@ -271,7 +277,7 @@ ggplot(df, aes(x=var1))+
 ```
 
 # Distributions
-Normal Distribution 
+Normal Distribution
 
 ```{r show-mean-median}
 mean(df$var1, na.rm=T)
@@ -279,14 +285,14 @@ median(df$var1, na.rm=T)
 ```
 
 # Normal Distribution
-- an absolute key feature of the normal distribution is that approximately: 
-    - 68\% of all cases lie within one standard deviation of the mean; 
-    - 95\% of cases lie within two standard deviations of the mean and 
-    - 99\% of cases lie within three standard deviations from the mean. 
+- an absolute key feature of the normal distribution is that approximately:
+    - 68\% of all cases lie within one standard deviation of the mean;
+    - 95\% of cases lie within two standard deviations of the mean and
+    - 99\% of cases lie within three standard deviations from the mean.
 
 # Normal Distribution
-```{r include=T, out.width="50%", echo=F, opts.label="nopurl"}
-knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/a/a9/Empirical_Rule.PNG")
+```{r show-normal-distribution-,include=T, out.width="50%", echo=F, opts.label="nopurl"}
+knitr::include_graphics("images/Empirical_Rule.png")
 ```
 
 
