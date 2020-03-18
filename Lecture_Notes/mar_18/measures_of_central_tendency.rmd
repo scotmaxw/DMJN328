@@ -291,7 +291,7 @@ median(df$var1, na.rm=T)
     - 99\% of cases lie within three standard deviations from the mean.
 
 # Normal Distribution
-```{r show-normal-distribution-,include=T, out.width="50%", echo=F, opts.label="nopurl"}
+```{r show-normal-distribution, purl=F,include=T, out.width="50%", echo=F, opts.label="nopurl"}
 knitr::include_graphics("images/Empirical_Rule.png")
 ```
 
